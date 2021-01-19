@@ -31,4 +31,4 @@ The folder structure:
              
              
 # Screenshots
-![](https://github.com/dev-ops-hub/restful-queryform/blob/main/architecture.jpg)
+![](https://github.com/dev-ops-hub/Tech-Challenge/blob/master/architecture.jpg)
