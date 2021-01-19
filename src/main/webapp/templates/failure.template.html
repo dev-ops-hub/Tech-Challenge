@@ -1,0 +1,19 @@
+ <!-- Error page -->
+<h2 align="center" class="error">Oops!!</h2>
+<form name="form">
+<div align="center" class="error">An unexpected error has occurred! Please contact the administrator for assistance</div>
+
+ 	<div>
+        <label for="status">Error Status: </label> {{ userData.status }}
+    </div>
+ 	<div>
+        <label for="status">Error Message: </label> {{ userData.message }}
+    </div>
+ 	<div>
+        <label for="status">Timestamp: </label> {{ userData.timestamp }}
+    </div>
+    <div algin="center">
+	    <!-- Back button to edit the form again -->
+    	<button type="button" ng-click="userData.backToHome();">Back</button>
+    </div>
+</form>

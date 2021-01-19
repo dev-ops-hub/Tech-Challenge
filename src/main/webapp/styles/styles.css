@@ -1,0 +1,78 @@
+h1 {
+  margin-bottom: 30px;
+}
+
+
+.center {
+  margin: auto;
+  width: 52%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+  text-align: left;
+  float: none;
+}
+
+div {
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+} 
+
+button:enabled {
+  font-weight: bold;
+}
+
+input:disabled, button:disabled {
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  color: rgb(235, 235, 228);
+}
+
+
+.highlight { 
+    border: 2px red solid;
+}
+
+.mandatory { 
+    color:#ff0000; font-weight:bold; 
+}
+
+.success { color:#3d6611; font-weight:bold; }
+
+.error { color:#df280a; font-weight:bold; }
+
+label{
+  font-weight: bold;
+}
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+
+
+table {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	width: 100%;
+	font-size: 12px;
+}
+
+caption {
+	text-align: left;
+	color: silver;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 5px;
+}
+
+th {
+	background: SteelBlue;
+	color: white;
+}
+
+tbody tr:nth-child(even) {
+	background: WhiteSmoke;
+}

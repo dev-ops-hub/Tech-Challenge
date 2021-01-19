@@ -1,0 +1,43 @@
+<form name="form" >
+    <div>
+        <label for="email">Email (max. 30 chars)<span class="mandatory">*</span>: </label><br>
+        <!-- The text area is restricted to 30 chars by input length -->
+        <input type="email" name="email" id="email" placeholder="Enter your email address"
+        		size="30" maxlength="30" ng-model="userFormDetail.email" required />
+        <div>
+			 <!-- Error message for Email input field -->
+	        <span ng-show="form.email.$dirty && form.email.$error.required" class="error" >Email is required!</span>
+	        <span ng-show="form.email.$dirty && form.email.$error.email" class="error" >Email format is invalid!</span>
+	    </div>
+    </div>
+    <div>
+        <label for="topic">Topic (max. 60 chars)<span class="mandatory">*</span>: </label><br>
+        <!-- The text area is restricted to 60 chars by input length -->
+        <input type="text" name="topic" id="topic" placeholder="Enter your topic title"
+        		size="60" maxlength="60" ng-model="userFormDetail.topic" required />
+
+    	<!-- Error message for Topic input field -->
+	    <div>
+        <span ng-show="form.topic.$dirty && form.topic.$error.required" class="error" >Topic is required!</span>
+        </div>
+    </div>
+    <div>
+        <label for="topicDecription">Message (max. 120 words)<span class="mandatory">*</span>: </label><br>
+
+        <!-- The text area is restricted to 120 words. @see userFormController checkwords function -->
+        <textarea placeholder="Enter your description" rows="6" cols="60" name="message" id="message"
+             	  ng-model="userFormDetail.message" ng-change="userFormDetail.checkWords()" required>
+        </textarea>
+ 		<br>{{userFormDetail.wordCounts}} words</br>
+    	<!-- Error message for Topic Description input field -->
+	    <div>
+        <span ng-show="form.message.$dirty && form.message.$error.required" class="error" >Message is required!</span>
+    	</div>
+    </div>
+    <div>
+        <button type="button" ng-disabled="form.$invalid" ng-click="userFormDetail.submit();">Submit</button>
+    </div>
+
+ </form>
+
+

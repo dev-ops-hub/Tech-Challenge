@@ -1,0 +1,22 @@
+<!-- Display the message that entry has submitted successfully -->
+<div align="center" class="success">You have submit your query successfully. </div>
+<form name="form">
+    <div>
+        <label for="email">Email (max. 30 chars): </label><br>
+        <div>{{ userData.email }}</div>
+    </div>
+    <div>
+        <label for="topic">Topic (max. 60 chars): </label><br>
+     	<!-- Preview the topic and highlight the box if an error encounters related to topic -->
+     	<div>{{userData.topic}}</div>
+    </div>
+    <div>
+        <label for="topicDecription">Message (max. 120 words): </label><br>
+		<div>{{userData.message}}</div>
+    </div>
+    <div algin="center">
+	    <!-- Back button to edit the form again -->
+    	<button type="button" ng-click="userData.backToHome();">Back</button>
+    </div>
+
+ </form>

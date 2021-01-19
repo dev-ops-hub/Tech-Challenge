@@ -1,0 +1,37 @@
+<form name="form" >
+    <div>
+        <label for="userId">User ID <span class="mandatory">*</span>: </label><br>
+        <!-- The text area is restricted to 30 chars by input length -->
+        <input type="UserId" name="userId" id="userId" placeholder="Enter your User Id"
+        		size="30" maxlength="30" ng-model="userData.userId" required />
+    </div>
+    <div>
+      <span ng-show="form.userId.$dirty && form.userId.$error.required" class="error" >UserId is required!</span>
+    </div>
+    <div>
+        <label for="pwd">Password <span class="mandatory">*</span>: </label><br>
+        <!-- The text area is restricted to 30 chars by input length -->
+        <input type="pwd" name="pwd" id="pwd" placeholder="Enter your password"
+        		size="30" maxlength="30" ng-model="userData.pwd" required />
+    </div>
+    <div>
+      <span ng-show="form.pwd.$dirty && form.pwd.$error.required" class="error" >Password is required!</span>
+    </div>
+
+    <div>
+        <button type="button" ng-disabled="form.$invalid" ng-click="userData.submit();">Submit</button>
+    </div>
+</form>
+
+<table ng-show="queries.length">
+	<tr>
+		<th align="center">Email</th>
+		<th align="center">Topic</th>
+		<th align="center">Message</th>
+	</tr>
+	<tr ng-repeat="query in queries">
+		<td>{{ query.email}}</td>
+		<td>{{ query.topic }}</td>
+		<td>{{ query.message }}</td>
+	</tr>
+</table>
