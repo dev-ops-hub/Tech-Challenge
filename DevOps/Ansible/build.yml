@@ -5,22 +5,22 @@
       file:
         path: ./demo-dockerfile
         state: directory
-        owner: root
-        group: root
+        owner: ubuntu
+        group: ubuntu
         mode: '0755'
     - name: copy Dockerfile
       copy:
         src: ./Dockerfile
         dest: ./demo-dockerfile/Dockerfile
-        owner: root
-        group: root
+        owner: ubuntu
+        group: ubuntu
         mode: '0644'
     - name: copy War file
       copy:
         src: ./QueryFormApplication-0.0.1-SNAPSHOT.war
         dest: ./demo-dockerfile/QueryFormApplication-0.0.1-SNAPSHOT.war
-        owner: root
-        group: root
+        owner: ubuntu
+        group: ubuntu
         mode: '0644'
     - name: build container image
       docker_image:

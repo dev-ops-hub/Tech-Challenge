@@ -4,11 +4,11 @@
     - name: archive container image as a tarball
       docker_image:
         name: webapp-container
-        archive_path: /root/webapp-container.tar
+        archive_path: ./demo-dockerfile/webapp-container.tar
         source: pull
         state: present
     - name: fetch archived image
       fetch:
-        src: /root/webapp-container.tar
+        src: ./demo-dockerfile/webapp-container.tar
         dest: ./webapp-container.tar
         flat: true

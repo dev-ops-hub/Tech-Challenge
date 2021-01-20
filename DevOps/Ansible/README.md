@@ -29,4 +29,4 @@ places it into the local directory.</li>
 <ol>
 <li>login to the target machine and run the docker image in the container</li>
 </ol>
-<p><b>docker run --rm -it -p 80:8080 webapp-container</b>
+<p><b>docker run --rm -it -p 80:80 webapp-container</b>
