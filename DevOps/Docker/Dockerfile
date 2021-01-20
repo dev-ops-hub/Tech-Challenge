@@ -1,6 +1,6 @@
 FROM openjdk:8
 
-EXPOSE 8080
+EXPOSE 80
 
 WORKDIR /user/local/bin
 
