@@ -3,7 +3,7 @@
   tasks:
     - name: copy tarball to host
       copy:
-        src: ./webapp-container.tar
+        src: ./demo-dockerfile/webapp-container.tar
         dest: webapp-container.tar
 
     - name: load container from tarball
