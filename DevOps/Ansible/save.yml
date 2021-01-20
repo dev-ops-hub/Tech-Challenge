@@ -7,8 +7,3 @@
         archive_path: ./demo-dockerfile/webapp-container.tar
         source: pull
         state: present
-    - name: fetch archived image
-      fetch:
-        src: ./demo-dockerfile/webapp-container.tar
-        dest: ./webapp-container.tar
-        flat: true
